@@ -5,32 +5,31 @@ import useCounter from "../../Hooks/useCounter";
 import CardBreakingBad from "../CardBreakingBad";
 import CustomLoader from "../CustomLoader";
 const MultipleCustomHooks = () => {
-  const  {
-    counter,
-    increment,
-    decrement,reset} = useCounter(1);
+  const { counter, increment, decrement, reset } = useCounter(1);
   const state = useFetch(
     `https://www.breakingbadapi.com/api/characters/${counter}`
   );
   const { loading, data, error } = state;
-  console.log(data);
   return (
     <>
       {loading ? (
-        <CustomLoader tipo="Bars" />
+        <CustomLoader tipo="BallTriangle" />
       ) : (
-       
-          data.map((personaje) => (
+        <>
+          {data.map((personaje) => (
+         
             <CardBreakingBad
-              key={personaje.char_id}
-              titulo={personaje.nickname}
-              contenido={personaje.name}
-              urlImagen={personaje.img}
+              key={data[0].char_id}
+              titulo={data[0].nickname}
+              contenido={data[0].name}
+              urlImagen={data[0].img}
             />
-          ))
+       
+          ))}
+          <Button  variant="contained" color="primary" onClick={decrement}>Anterior</Button>
+          <Button  variant="contained" color="primary" onClick={increment}>Siguiente</Button>
+        </>
       )}
-      <Button onClick={decrement}>Anterior</Button>
-      <Button onClick={increment}>Siguiente</Button>
     </>
   );
 };

@@ -5,7 +5,7 @@ const CustomLoader = ({ tipo }) => {
     return (
         <Loader
             type={tipo}
-            color="#2E3821"
+            color="#0F8A00"
             height={100}
             width={100}
             timeout={3000} //3 secs
