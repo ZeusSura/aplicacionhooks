@@ -19,10 +19,10 @@ const MultipleCustomHooks = () => {
           {data.map((personaje) => (
          
             <CardBreakingBad
-              key={data[0].char_id}
-              titulo={data[0].nickname}
-              contenido={data[0].name}
-              urlImagen={data[0].img}
+              key={personaje.char_id}
+              titulo={personaje.nickname}
+              contenido={personaje.name}
+              urlImagen={personaje.img}
             />
        
           ))}
