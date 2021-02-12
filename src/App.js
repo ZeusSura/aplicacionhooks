@@ -5,7 +5,7 @@ import MultipleCustomHooks from "./components/example/MultipleCustomHooks";
 // import CounterWithCustomHook from './components/useState/CounterWithCustomHook'
 // import SimpleForm from "./components/useEffect/SimpleForm";
 // import FormCustomHook from './components/useEffect/FormCustomHook'
-
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 const App = () => {
   return (
     <>
