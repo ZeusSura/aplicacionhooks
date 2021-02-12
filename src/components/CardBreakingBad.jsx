@@ -13,7 +13,9 @@ const useStyles = makeStyles({
     maxWidth: 345,
   },
   media: {
-    height: 140,
+    height: 200,
+    paddingTop: '56.25%', // 16:9,
+    marginTop:'30'
   },
 });
 const CardBreakingBad = ({contenido,titulo,urlImagen=''})=>{
@@ -35,6 +37,14 @@ const CardBreakingBad = ({contenido,titulo,urlImagen=''})=>{
           </Typography>
         </CardContent>
       </CardActionArea>
+      <CardActions>
+        <Button size="small" color="primary">
+          Compartir
+        </Button>
+        <Button size="small" color="primary">
+         Ver mas
+        </Button>
+      </CardActions>
     </Card>
     )
 }

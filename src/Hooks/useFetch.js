@@ -12,15 +12,13 @@ export default function useFetch(url) {
       let respuesta = await fetch(url);
       let dataResponse = await respuesta.json();
 
-      setTimeout(() => {
-
 
         setstate({
           loading: false,
           data: dataResponse,
           error: null,
         });
-      }, 3000);
+    
 
     };
     callAPI();
